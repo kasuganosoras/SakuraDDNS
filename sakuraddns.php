@@ -79,12 +79,12 @@ $accessKeySecret = "Your Access Key Secret";
 
 $arr = Array(
     "Action" => "DescribeDomainRecords",	// 业务类型标识，请勿修改
-    "DomainName" => "example.com",			  // 要解析的域名
-	  "RecordID" => "",						          // 记录ID，留空，请勿修改
-	  "Value" => "",							          // 记录值，留空，请勿修改
-	  "RR" => "ddns",							          // 解析主机名，改为你需要的
-	  "Type" => "A",							          // 记录类型，请勿修改
-	  "TTL" => 600							            // TTL 生存时间，默认 600
+    "DomainName" => "example.com",	// 要解析的域名
+    "RecordID" => "",						          // 记录ID，留空，请勿修改
+    "Value" => "",							          // 记录值，留空，请勿修改
+    "RR" => "ddns",							          // 解析主机名，改为你需要的
+    "Type" => "A",							          // 记录类型，请勿修改
+    "TTL" => 600							            // TTL 生存时间，默认 600
 );
 
 /*
@@ -111,7 +111,7 @@ if(isset($recordList["DomainRecords"]["Record"])) {
 			$NewIP = iconv("GB2312", "UTF-8", $NewIP);
 			$arr["Value"] = $NewIP;
 			
-			if($arr["Record"] !== "" && $arr["Value"] !== "") {
+			if($arr["RecordId"] !== "" && $arr["Value"] !== "") {
 				$obj = new AliyunAPI($arr, $url, $accessKeyId, $accessKeySecret);
 				$result = json_decode($obj->callInterface(), true);
 				
