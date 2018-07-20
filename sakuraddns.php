@@ -72,19 +72,19 @@ class AliyunAPI {
  */
 
 $url = "http://alidns.aliyuncs.com/?";
-$api = "http://2017.ip138.com/ic.asp";	// 获取本机 IP 地址的 API
+$api = "http://2017.ip138.com/ic.asp";      // 获取本机 IP 地址的 API
 
 $accessKeyId = "Your Access Key ID";
 $accessKeySecret = "Your Access Key Secret";
 
 $arr = Array(
-    "Action" => "DescribeDomainRecords",	// 业务类型标识，请勿修改
-    "DomainName" => "example.com",	// 要解析的域名
-    "RecordID" => "",						          // 记录ID，留空，请勿修改
-    "Value" => "",							          // 记录值，留空，请勿修改
-    "RR" => "ddns",							          // 解析主机名，改为你需要的
-    "Type" => "A",							          // 记录类型，请勿修改
-    "TTL" => 600							            // TTL 生存时间，默认 600
+    "Action" => "DescribeDomainRecords",    // 业务类型标识，请勿修改
+    "DomainName" => "example.com",          // 要解析的域名
+    "RecordID" => "",                       // 记录ID，留空，请勿修改
+    "Value" => "",                          // 记录值，留空，请勿修改
+    "RR" => "ddns",                         // 解析主机名，改为你需要的
+    "Type" => "A",                          // 记录类型，请勿修改
+    "TTL" => 600                            // TTL 生存时间，默认 600
 );
 
 /*
